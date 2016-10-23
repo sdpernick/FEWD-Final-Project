@@ -8,31 +8,35 @@
   <head>
    <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="css/style.css">
-   <link href="https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Nova+Flat" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Nova+Flat|Abhaya+Libre" rel="stylesheet">
    <script src='http://code.jquery.com/jquery-latest.min.js'></script>
 
   </head>
   <body>
 
     <header> 
-       <img src="images/dc flag.png" id="flag"> 
+       <!--<img src="images/dc flag.png" id="flag4">-->
           <div id="logo">
             <h1 class="dc">DC</h1>
             <h1 class="guide">Dining Guide</h1>
           </div>
-       <img src="images/dc flag.png" id="flag">
+       <!--<img src="images/dc flag.png" id="flag5">-->
     </header>
+
+
 
     <div id="foodie">
         <h3 class="about">About</h3>
-          <p class="foodie1">Calling all foodies! (And those who hate that word but still love to eat).</p>
-          <p class="foodie1">To begin, click the filters to find the perfect spot for you. Or, simply explore below.</p>
-    </div>
+          <!--<p class="foodie1">Calling all foodies! (And those who hate that word but still love to eat).</p>
+          <p class="foodie1">To begin, click the filters to find the perfect spot for you. Or, simply explore below.</p>-->
+    </div>  
 
-
-  <section id="dropdown">
+    <div id="filters">
        <h3 class="filter">Filters</h3>
-       <nav class="categories">
+    </div>
+       
+   <!--
+   <nav class="categories">
            <ul>
              <li class="li1">Neighborhood</li>
              <li class="li2">Cuisine</li>
@@ -40,60 +44,69 @@
              <li class="li4">Good For</li>
              <li class="li5">Atmosphere</li>
            </ul>   
-       </nav>
+   </nav>
+   -->
+       
+
+<section id="dropdown">
 
        <nav class="sub-categories">
-           <ul>
-                <li class="hood">Eastern Market</li>
-                <li class="hood">Bloomingdale/Shaw</li>
-                <li class="hood">Adams Morgan/Dupont</li>
-                <li class="hood">14th Street</li>
-                <li class="hood">Penn Quarter</li>
-                <li class="hood">Georgetown</li>
-                <li class="hood">H St. NE</li>
-                <li class="hood">Food Truck</li>  
-                
-                <li class="cuisine">Italian/Seafood</li>
-                <li class="cuisine">Japanese</li>
-                <li class="cuisine">Chinese/Thai</li>
-                <li class="cuisine">Indian</li>
-                <li class="cuisine">American/Seafood</li>
-                <li class="cuisine">Ethiopian</li>
-                <li class="cuisine">Spanish/S. American</li>   
+           <ul class="hood">
+                <li>Eastern Market</li>
+                <li>Bloomingdale/Shaw</li>
+                <li>Adams Morgan/Dupont</li>
+                <li>14th Street</li>
+                <li>Penn Quarter</li>
+                <li>Georgetown</li>
+                <li>H St. NE</li>
+                <li>Food Truck</li>
+          </ul>
 
-                <li class="price">$(Under $20)</li>
-                <li class="price">$$($20-$40)</li>
-                <li class="price">$$$($40+)</li>  
-                
-                <li class="good">Lunch</li>
-                <li class="good">Dinner</li>
-                <li class="good">Groups</li>
-                <li class="good">Dates</li>
-                <li class="good">Kid-Friendly</li>
-                <li class="good">Parents</li>   
+          <ul class="cuisine">
+                <li>Italian/Seafood</li>
+                <li>Japanese</li>
+                <li>Chinese/Thai</li>
+                <li>Indian</li>
+                <li>American/Seafood</li>
+                <li>Ethiopian</li>
+                <li>Spanish/S. American</li>  
+          </ul>
 
-                <li class="atmo">Quiet</li>
-                <li class="atmo">Fancy</li>
-                <li class="atmo">Causal</li>
-                <li class="atmo">Romantic</li>
+          <ul class="price"> 
+                <li>$(Under $20)</li>
+                <li>$$($20-$40)</li>
+                <li>$$$($40+)</li>  
+          </ul>
+
+          <ul class="good">
+                <li>Lunch</li>
+                <li>Dinner</li>
+                <li>Groups</li>
+                <li>Dates</li>
+                <li>Kid-Friendly</li>
+                <li>Parents</li>   
+          </ul>
+
+          <ul class="atmo">
+                <li>Quiet</li>
+                <li>Fancy</li>
+                <li>Causal</li>
+                <li>Romantic</li>
          </ul>
          </nav>
 
-
-             <button class="go">Go!</button>
-          
-        
+             <!--<button class="go">Go!</button>-->
   </section>
   
      
   <h3 class="mmm">Restaurants</h3>
 
 
-   <section id="main">
+  <section id="main">
 
       
 
-       <div id="column">
+       <div id="column" data-neighborhood="Eastern Market">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="pnp.html">Pineapples and Pearls</a></h3>
@@ -173,7 +186,7 @@
              </div>
         </div> 
 
-          <div id="column10">
+          <div id="column10" >
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="source.html">The Source</a></h3>
