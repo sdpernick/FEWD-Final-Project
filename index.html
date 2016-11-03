@@ -7,17 +7,17 @@
 
   <head>
    <link rel="stylesheet" href="css/style.css">
-   <link href="https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Muli" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Muli|Libre+Franklin|Questrial" rel="stylesheet">
    <script src='http://code.jquery.com/jquery-latest.min.js'></script>
 
   </head>
   <body>
 
     <header> 
-          <div id="logo">
+          <div id="logo"><a href="index.html" id="logo1">
             <h1 class="dc">DC</h1>
             <h1 class="guide">Dining Guide</h1>
-          </div>
+          </a></div>
     </header>
 
 
@@ -29,72 +29,73 @@
        </div>
     </div>  
 
-       
-   
-   <nav class="categories">
-           <ul>
-             <li class="hood">Neighborhood</li>
-             <li class="cuisine">Cuisine</li>
-             <li class="price">Price</li>
-             <li class="good">Good For</li>
-             <li class="atmo">Atmosphere</li>
-           </ul>   
-   </nav>
-   
-       
+   <section id="filters">
+     <div class="dropdown" id="hood">
+       <h4>Neighborhood <span id="arrow">&#9660;</span></h4>
+        <ul>
+            <li>14th Street/U Street</li>
+            <li>Adams Morgan/Dupont</li>
+            <li>Bloomingdale/Shaw</li>
+            <li>Eastern Market</li>
+            <li>Penn Quarter</li>
+            <li>Georgetown</li>
+            <li>H St. NE</li>
+       </ul>
+    </div> 
 
-<section id="dropdown">
-       <nav class="sub-categories">
-           <ul class="hood">
-                <li>Eastern Market</li>
-                <li>Bloomingdale/Shaw</li>
-                <li>Adams Morgan/Dupont</li>
-                <li>14th Street</li>
-                <li>Penn Quarter</li>
-                <li>Georgetown</li>
-                <li>H St. NE</li>
-                <li>Food Truck</li>
-          </ul>
+    <div class="dropdown" id="cuisine">
+       <h4>Cuisine <span id="arrow">&#9660;</span></h4>
+        <ul>
+            <li>Spanish/S. American</li> 
+            <li>Italian/Seafood</li>
+            <li>Chinese/Thai</li>
+            <li>Ethiopian</li>
+            <li>Japanese</li>
+            <li>American</li>
+            <li>Indian</li>    
+       </ul>
+    </div> 
 
-          <ul class="cuisine">
-                <li>Italian/Seafood</li>
-                <li>Japanese</li>
-                <li>Chinese/Thai</li>
-                <li>Indian</li>
-                <li>American/Seafood</li>
-                <li>Ethiopian</li>
-                <li>Spanish/S. American</li>  
-          </ul>
+    <div class="dropdown" id="price">
+       <h4>Price <span id="arrow">&#9660;</span></h4>
+        <ul>
+            <li>$(Under $20)</li>
+            <li>$$($20-$40)</li>
+            <li>$$$($40+)</li>   
+       </ul>
+    </div> 
 
-          <ul class="price"> 
-                <li>$(Under $20)</li>
-                <li>$$($20-$40)</li>
-                <li>$$$($40+)</li>  
-          </ul>
+    <div class="dropdown" id="good">
+       <h4>Good For <span id="arrow">&#9660;</span></h4>
+        <ul>
+            <li>Special Occation</li>
+            <li>Groups</li>
+            <li>Dates</li>
+            <li>Parents</li> 
+            <li>Everyday</li>   
+       </ul>
+    </div> 
 
-          <ul class="good">
-                <li>Lunch</li>
-                <li>Dinner</li>
-                <li>Groups</li>
-                <li>Dates</li>
-                <li>Kid-Friendly</li>
-                <li>Parents</li>   
-          </ul>
+    <div class="dropdown" id="atmo">
+       <h4>Atmosphere <span id="arrow">&#9660;</span></h4>
+        <ul>
+           <li>Quiet</li>
+           <li>Fancy</li>
+           <li>Causal</li>
+           <li>Romantic</li>
+           <li>Fun</li>   
+       </ul>
+    </div> 
+    </section>
 
-          <ul class="atmo">
-                <li>Quiet</li>
-                <li>Fancy</li>
-                <li>Causal</li>
-                <li>Romantic</li>
-         </ul>
-         </nav>
-
-             <button class="go">Go!</button>
-  </section>
+  <div id="gogo">
+      <button class="go">Go!</button>
+  </div>
+            
 
 
   <section id="main">
-       <div id="top-left1-column" class="restaurant-item" data-neighborhood="Eastern Market">
+       <div id="top-left1-column" class="restaurant-item" data-hood="Eastern Market" data-cuisine="American" data-price="$$$($40+)" data-good="Special Occation" data-atmo="Fancy">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="pnp.html">Pineapples and Pearls</a></h3>
@@ -102,7 +103,7 @@
              </div>
         </div>    
 
-       <div id="top-left2-column" class="restaurant-item">
+       <div id="top-left2-column" class="restaurant-item" data-hood="Eastern Market" data-cuisine="Italian" data-price="$$($20-$40)" data-good="Dates" data-atmo="Fun">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="osteria.html">Osteria Morini</a></h3>
@@ -110,7 +111,7 @@
              </div>
         </div>   
 
-        <div id="top-right1-column" class="restaurant-item">
+        <div id="top-right1-column" class="restaurant-item" data-hood="H St. NE" data-cuisine="Japanese" data-price="$(Under $20)" data-good="Dates" data-atmo="Causal">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="toki.html">Toki Underground</a></h3>
@@ -118,7 +119,7 @@
              </div>
         </div>    
 
-         <div id="top-right2-column" class="restaurant-item">
+         <div id="top-right2-column" class="restaurant-item" data-hood="Bloomingdale/Shaw" data-cuisine="Italian" data-price="$$($20-$40)" data-good="Dates" data-atmo="Romantic">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="red hen.html">Red Hen</a></h3>
@@ -126,7 +127,7 @@
              </div>
         </div>   
 
-       <div id="second-left1-column" class="restaurant-item">
+       <div id="second-left1-column" class="restaurant-item" data-hood="Adams Morgan/Dupont" data-cuisine="Japanese" data-price="$(Under $20)" data-good="Everyday" data-atmo="Causal">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="donburi.html">Donburi</a></h3>
@@ -134,7 +135,7 @@
              </div>
         </div> 
 
-          <div id="second-left2-column" class="restaurant-item">
+          <div id="second-left2-column" class="restaurant-item" data-hood="Bloomingdale/Shaw" data-cuisine="American" data-price="$$$($40+)" data-good="Special Occation" data-atmo="Fancy">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="kinship.html">Kinship</a></h3>
@@ -142,7 +143,7 @@
              </div>
         </div> 
 
-          <div id="second-right1-column" class="restaurant-item">
+          <div id="second-right1-column" class="restaurant-item" data-hood="14th Street/U Street" data-cuisine="American" data-price="$(Under $20)" data-good="Everyday" data-atmo="Causal">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="dc slices.html">DC Slices</a></h3>
@@ -150,7 +151,7 @@
              </div>
         </div> 
 
-          <div id="second-right2-column" class="restaurant-item">
+          <div id="second-right2-column" class="restaurant-item" data-hood="Georgetown" data-cuisine="Italian/Seafood" data-price="$$$($40+)" data-good="Parents" data-atmo="Fancy">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="fiola.html">Fiola Mare</a></h3>
@@ -158,7 +159,7 @@
              </div>
         </div> 
 
-          <div id="third-left1-column" class="restaurant-item">
+          <div id="third-left1-column" class="restaurant-item" data-hood="Adams Morgan/Dupont" data-cuisine="Indian" data-price="$$($20-$40)" data-good="Parents" data-atmo="Fancy">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="rasika.html">Rasika West End</a></h3>
@@ -166,7 +167,7 @@
              </div>
         </div> 
 
-          <div id="third-left2-column" class="restaurant-item">
+          <div id="third-left2-column" class="restaurant-item" data-hood="Adams Morgan/Dupont" data-cuisine="Thai" data-price="$(Under $20)" data-good="Groups" data-atmo="Causal">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="beau.html">Beau Thai</a></h3>
@@ -174,7 +175,7 @@
              </div>
         </div> 
 
-          <div id="third-right1-column" class="restaurant-item">
+          <div id="third-right1-column" class="restaurant-item" data-hood="Penn Quarter" data-cuisine="Chinese" data-price="$$($20-$40)" data-good="Parents" data-atmo="Quiet">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="source.html">The Source</a></h3>
@@ -182,7 +183,7 @@
              </div>
         </div> 
 
-          <div id="third-right2-column" class="restaurant-item">
+          <div id="third-right2-column" class="restaurant-item" data-hood="Penn Quarter" data-cuisine="American" data-price="$$($20-$40)" data-good="Dates" data-atmo="Fun">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="proof.html">Proof</a></h3>
@@ -190,7 +191,7 @@
              </div>
         </div> 
 
-          <div id="fourth-left1-column" class="restaurant-item">
+          <div id="fourth-left1-column" class="restaurant-item" data-hood="14th Street/U Street" data-cuisine="Spanish/S. American" data-price="$$($20-$40)" data-good="Groups" data-atmo="Fun">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="estadio.html">Estadio</a></h3>
@@ -198,7 +199,7 @@
              </div>
         </div> 
 
-          <div id="fourth-left2-column" class="restaurant-item">
+          <div id="fourth-left2-column" class="restaurant-item" data-hood="Bloomingdale/Shaw" data-cuisine="Spanish/S. American" data-price="$$($20-$40)" data-good="Parents" data-atmo="Fun">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="del campo.html">Del Campo</a></h3>
@@ -206,7 +207,7 @@
              </div>
         </div> 
 
-          <div id="fourth-right1-column" class="restaurant-item">
+          <div id="fourth-right1-column" class="restaurant-item" data-hood="Adams Morgan/Dupont" data-cuisine="Japanese" data-price="$$$($40+)" data-good="Dates" data-atmo="Quiet">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="sushi taro.html">Sushi Taro</a></h3>
@@ -214,7 +215,7 @@
              </div>
         </div>  
 
-         <div id="fourth-right2-column" class="restaurant-item">
+         <div id="fourth-right2-column" class="restaurant-item" data-hood="14th Street/U Street" data-cuisine="Ethiopian" data-price="$(Under $20)" data-good="Everyday" data-atmo="Causal">
              <div class="inner-wrapper">
                 <div class="top-box">
                     <h3 class="number"><a href="dukem.html">Dukem</a></h3>

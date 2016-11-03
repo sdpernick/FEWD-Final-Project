@@ -17,15 +17,13 @@
 
 
 /*Header*/
-header {
-  margin: 0 auto;
-  width: 805px;
+#logo {
+  margin: 40px 360px 50px;
+  border-bottom: solid #d3d3d3 1px;
 }
 
-
-#logo {
-  margin: 40px 180px 50px;
-  border-bottom: solid #d3d3d3 1px;
+#logo1{
+  color: black;
 }
 
 .dc {
@@ -50,6 +48,21 @@ a:link{
   text-decoration: none;
 }
 
+/*Header Responsive*/
+@media only screen and (max-width: 767px) {
+  #logo{
+    width: 40%;
+    margin: 40px auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #logo {
+    width: 40%;
+    margin: 40px auto;
+  }
+}
+
 
 /*About*/
 #foodie {
@@ -57,15 +70,11 @@ a:link{
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 100%;
-  float: left;
-  margin-bottom: 30px;
 }
 
 #overlay{
   background-color: rgba(000,000,000,.5);
-  width: 100%;
-  height: 360px;
+  height: 320px;
 }
 
 #overlay:hover{
@@ -73,16 +82,16 @@ a:link{
 }
 
 .about {
-   font-size: 28px;
+   font-size: 30px;
     font-weight: 800;
     font-family: 'Cinzel', serif;
     color: white;
     text-transform: uppercase;
-    border-bottom: solid #d3d3d3 1px;
    text-align: center;
-   margin: 0px 260px;
+   margin: 0 450px;
    padding-top: 120px;
    padding-bottom: 5px;
+   border-bottom: #d3d3d3 1px solid;
 }
 
 #call{
@@ -98,60 +107,139 @@ a:link{
   padding-top: 20px;
 }
 
+/*About Responsive*/
+@media only screen and (max-width: 767px) {
+  .about{
+    width: 30%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .about {
+    width: 30%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #foodie{
+    background-attachment: scroll;
+    background-size: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #foodie {
+    background-attachment: local;
+    background-size: 100%;
+    margin: 0 auto;
+  }
+}
+
+
 /*Filters*/
-#dropdown {
-  overflow: hidden;
-}
-
-.categories ul{
+#filters{
+  padding-bottom: 60px;
   padding-top: 20px;
-  padding-bottom: 20px;
-  overflow: hidden;
-  clear: both;
 }
 
-.categories li{
-  float: left;
+h4{
+  padding: 20px 0;
   list-style-type: none;
   font-size: 24px;
   font-weight: 300;
   font-family: 'Cinzel', serif;
   color: #033048;
-  margin: 0 50px;
 }
 
-.sub-categories ul {
-  display: none;
+#arrow{
+  font-size: 14px;
+}
+
+.dropdown{
+  overflow: hidden;
+  height: 50px;
   float: left;
-  margin: 0 34px;
+  margin: 0 26px;
 }
 
-.sub-categories li{
-  font-size: 18px;
+.dropdown li:active{
+  color: blue;
+}
+
+.dropdown li:visited{
+  color: blue;
+}
+
+
+#hood{
+ font-size: 18px;
   font-weight: 300;
   font-family: 'Cinzel', serif;
   color: #033048;
   list-style-type: none;
 }
 
-.hood li:hover{
-  background-color: #dcdcdc;
+#hood:hover{
+  cursor: pointer;
 }
 
-.cuisine li:hover{
-   background-color: #dcdcdc;
+#cuisine{
+ font-size: 18px;
+  font-weight: 300;
+  font-family: 'Cinzel', serif;
+  color: #033048;
+  list-style-type: none;
 }
 
-.price li:hover{
-  background-color: #dcdcdc;
+#cuisine:hover{
+  cursor: pointer;
 }
 
-.good li:hover{
-  background-color: #dcdcdc;
+#price{
+ font-size: 18px;
+  font-weight: 300;
+  font-family: 'Cinzel', serif;
+  color: #033048;
+  list-style-type: none;
 }
 
-.atmo li:hover{
-  background-color: #dcdcdc;
+#price:hover{
+  cursor: pointer;
+}
+
+#good{
+ font-size: 18px;
+  font-weight: 300;
+  font-family: 'Cinzel', serif;
+  color: #033048;
+  list-style-type: none;
+}
+
+#good:hover{
+  cursor: pointer;
+}
+
+
+#atmo{
+ font-size: 18px;
+  font-weight: 300;
+  font-family: 'Cinzel', serif;
+  color: #033048;
+  list-style-type: none;
+}
+
+#atmo:hover{
+  cursor: pointer;
+}
+
+
+#gogo{
+  width: 60px;
+  margin: 10px auto;
+  clear: both;
 }
 
 .go {
@@ -160,16 +248,50 @@ a:link{
   font-family: 'Cinzel', serif;
   list-style-type: none;
   padding: 5px 20px 5px;
-  margin: 0 auto;
+  display: block;
 }
 
 .go:hover{
   cursor: pointer;
 }
 
+/*Filters Responsive*/
+@media only screen and (max-width: 767px) {
+  #hood{
+    display: block;
+     clear: both;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #cuisine{
+    display: block;
+     clear: both;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #price{
+    display: block;
+     clear: both;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #good{
+    display: block;
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #atmo{
+    display: block;
+    clear: both;
+  }
+}
 
 /*Boxes*/
-
 .mmm{
  font-size: 24px;
  font-weight: 800;
@@ -289,6 +411,19 @@ a:hover, :link {
   font-size: 26px;
 }
 
+/*Boxes Responsive*/
+@media only screen and (max-width: 767px) {
+  .restaurant-item{
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurant-item{
+    width: 50%;
+  }
+}
+
 
 /*Contact*/
 #overlay2{
@@ -306,7 +441,7 @@ a:hover, :link {
   border-bottom: solid #d3d3d3 1px;
   text-align: center;
   clear: both;
-  background-image: url("../images/background9.jpg");
+  background-image: url("../images/background7.png");
    background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -319,9 +454,9 @@ a:hover, :link {
     font-weight: 800;
     border-bottom: solid #d3d3d3 1px;
    text-align: center;
-   margin: 0px 430px 30px;
+   margin: 0px 400px 30px;
    color: white;
-   padding-top: 42px;
+   padding-top: 40px;
 }
 
 .contact{
@@ -332,12 +467,54 @@ a:hover, :link {
     text-transform: uppercase;
 }
 
+/*Contact Responsive*/
+@media only screen and (max-width: 767px) {
+  .comment{
+    width: 50%;
+    margin: 30px auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .comment{
+    width: 50%;
+    margin: 30px auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #second{
+    background-attachment: scroll;
+    background-size: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #second{
+    background-attachment: local;
+    background-size: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #overlay2{
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #overlay2{
+    width: 100%;
+  }
+}
+
 /*Footer*/
 
 footer{
-  border-top: solid #d3d3d3 1px;
   margin: 0 auto;
-  width: 600px;
+  width: 450px;
 }
 
 .footer{
@@ -348,4 +525,19 @@ footer{
   border-bottom: solid #95a5a6 1px;
   margin: 30px 50px;
   text-align: center;
+}
+
+/*Footer Responsive*/
+@media only screen and (max-width: 767px) {
+  footer{
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  footer{
+    width: 50%;
+    margin: auto;
+  }
 }

@@ -52,20 +52,21 @@ a:link{
 
 /*Review*/
 .title{
-  font-size: 32px;
+  font-size: 36px;
   text-align: center;
   font-family: 'Cinzel', serif;
   text-transform: uppercase;
   padding-top: 40px;
   color: white;
   border-bottom: solid #d3d3d3 1px;
-  margin: 0 460px 20px;
+  margin: 0 460px 30px;
 }
 
 #overlay{
   background-color: rgba(000,000,000,.5);
   width: 100%;
-  height: 1000px;
+  height: 350px;
+  padding-top: 10px;
 }
 
 #overlay:hover{
@@ -76,14 +77,27 @@ a:link{
   font-size: 20px;
   text-align: center;
   font-family: 'Muli', sans-serif;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+
+.tags{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Muli', sans-serif;
   color: white;
 }
 
-#space{
-   padding-top: 10px;
+.space{
+   padding-top: 30px;
 }
 
+.spacing{
+  padding-top: 5px;
+}
 
+/*DC Slices*/
 #dcslices{
   background-image: url("../images/dc slices.jpg");
   background-attachment: fixed;
@@ -91,16 +105,260 @@ a:link{
   background-size: 100%;
 }
 
+/*Kinship*/
+#kinship{
+  background-image: url("../images/kinship4.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
+.review.kinship{
+  margin: 10px 150px;
+}
 
+/*Pineapples and Pearls*/
+#pnp{
+  background-image: url("../images/pnp11.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.pnp{
+  margin-top: 10px;
+}
+
+.titlepnp{
+  margin: 0 360px 30px;
+}
+
+/*Osteria Morini*/
+#osteria{
+  background-image: url("../images/osteria.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.osteria{
+  margin-top: 10px;
+}
+
+.titleosteria{
+  margin: 0 390px 30px;
+}
+
+/*Toki Underground*/
+#toki{
+  background-image: url("../images/toki.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.toki{
+  margin: 10px 150px;
+}
+
+.titletoki{
+  margin: 0 360px 30px;
+}
+
+#overlaytoki{
+  background-color: rgba(000,000,000,.5);
+  width: 100%;
+  height: 380px;
+  padding-top: 10px;
+}
+
+#overlaytoki:hover{
+  background-color: rgba(000,000,000,.4);
+}
+
+/*Red Hen*/
+ #redhen{
+  background-image: url("../images/red hen10.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.redhen{
+  margin: 10px 150px;
+}
+
+.titleredhen{
+  margin: 0 420px 30px;
+}
+
+/*Donburi*/
+#donburi{
+  background-image: url("../images/donburi.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.donburi{
+  margin: 10px 150px;
+}
+
+.titledonburi{
+  margin: 0 420px 30px;
+}
+
+/*Fiola Mare*/
+#fiola{
+  background-image: url("../images/fiola mare.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.fiola{
+  margin-top: 10px;
+}
+
+.titlefiola{
+  margin: 0 420px 30px;
+}
+
+/*Rasika West End*/
+#rasika{
+  background-image: url("../images/rasika2.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.rasika{
+  margin-top: 10px;
+}
+
+.titlerasika{
+  margin: 0 380px 30px;
+}
+
+/*Beau Thai*/
+#beau{
+  background-image: url("../images/beau thai3.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.beau{
+  margin-top: 10px;
+}
+
+.titlebeau{
+  margin: 0 420px 30px;
+}
+
+/*The Source*/
+#source{
+  background-image: url("../images/source3.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.source{
+  margin-top: 10px;
+}
+
+.titlesource{
+  margin: 0 420px 30px;
+}
+
+/*Proof*/
+#proof{
+  background-image: url("../images/proof.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.proof{
+  margin-top: 10px;
+}
+
+.titleproof{
+  margin: 0 420px 30px;
+}
+
+/*Estadio*/
+#estadio{
+  background-image: url("../images/estadio.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.estadio{
+  margin-top: 10px;
+}
+
+.titleestadio{
+  margin: 0 440px 30px;
+}
+
+/*Del Campo*/
+#delcampo{
+  background-image: url("../images/del campo.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.delcampo{
+  margin-top: 10px;
+}
+
+.titledelcampo{
+  margin: 0 420px 30px;
+}
+
+/*Sushi Taro*/
+#sushitaro{
+  background-image: url("../images/sushi taro5.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.sushitaro{
+  margin-top: 10px;
+}
+
+.titlesushitaro{
+  margin: 0 420px 30px;
+}
+
+/*Dukem*/
+#dukem{
+  background-image: url("../images/dukem5.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.review.dukem{
+  margin-top: 10px;
+}
+
+.titledukem{
+  margin: 0 460px 30px;
+}
 
 
 /*Footer*/
 
 footer{
-  border-top: solid #d3d3d3 1px;
   margin: 0 auto;
-  width: 600px;
+  background-color: rgba(000,000,000,.05);
+  height: 100px;
 }
 
 .footer{
@@ -109,6 +367,7 @@ footer{
   font-family: 'Cinzel', serif;
   font-weight: 400;
   border-bottom: solid #95a5a6 1px;
-  margin: 30px 50px;
+  margin: 50px 420px 20px;
   text-align: center;
+  padding-top: 30px;
 }
