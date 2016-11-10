@@ -50,6 +50,13 @@ a:link{
   text-decoration: none;
 }
 
+/*Header Responsive*/
+@media only screen and (max-width: 767px) {
+  .dc, .guide{
+    width: 40%;
+  }
+}
+
 /*Review*/
 .title{
   font-size: 36px;
@@ -62,6 +69,21 @@ a:link{
   margin: 0 460px 30px;
 }
 
+/*Title Responsiveness*/
+@media only screen and (max-width: 767px) {
+  .title{
+    width: 40%;
+    margin: 40px auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .title{
+    width: 40%;
+    margin: 40px auto;
+  }
+}
+
 #overlay{
   background-color: rgba(000,000,000,.5);
   width: 100%;
@@ -72,6 +94,20 @@ a:link{
 #overlay:hover{
   background-color: rgba(000,000,000,.4);
 }
+
+/*Overlay Responsiveness*/
+@media only screen and (max-width: 767px) {
+  #overlay{
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #overlay{
+    height: 400px;
+  }
+}
+
 
 .review{
   font-size: 20px;
@@ -352,6 +388,13 @@ a:link{
   margin: 0 460px 30px;
 }
 
+/*Reviews Responsive*/
+@media only screen and (max-width: 767px) {
+  .title{
+    margin-left: 0px;
+    width: 100%;
+  }
+}
 
 /*Footer*/
 
@@ -370,4 +413,19 @@ footer{
   margin: 50px 420px 20px;
   text-align: center;
   padding-top: 30px;
+}
+
+/*Footer Responsive*/
+@media only screen and (max-width: 767px) {
+  .footer{
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer{
+    width: 50%;
+    margin: auto;
+  }
 }

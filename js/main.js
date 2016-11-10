@@ -1,10 +1,17 @@
+var restaurants = $(".restaurant-item");
+var neighbor = "";
+var food = "";
+var money = "";
+var dates = "";
+var sphere = "";
+
 // Open and Close Filters
 $("#hood").on("click", function(){
 
    if ($(this).hasClass("open")) {
       $(this).removeClass("open");
       $("#hood").animate({
-         height: 50   
+         height: 250
       });
 
    } else {
@@ -12,12 +19,8 @@ $("#hood").on("click", function(){
       $("#hood").animate({
          height: 250
       });
-   }  
-});
+   }
 
-// Change Link Color
-$("#hood").on("click", function(){
-   $(this).addClass("active");
 });
 
 
@@ -27,7 +30,7 @@ $("#cuisine").on("click", function(){
   if ($(this).hasClass("open")) {
    $(this).removeClass("open");
    $("#cuisine").animate({
-   	height: 50
+   	height: 250
    });
 
    } else {
@@ -43,7 +46,7 @@ $("#price").on("click", function(){
   if ($(this).hasClass("open")) {
    $(this).removeClass("open");
    $("#price").animate({
-   	height: 50
+   	height: 250
    });
 
    } else {
@@ -61,7 +64,7 @@ $("#good").on("click", function(){
    if ($(this).hasClass("open")) {
    $(this).removeClass("open");
    $("#good").animate({
-   	height: 50
+   	height: 250
    });
 
    } else {
@@ -77,7 +80,7 @@ $("#atmo").on("click", function(){
    if ($(this).hasClass("open")) {
    $(this).removeClass("open");
    $("#atmo").animate({
-   	height: 50
+   	height: 250
    });
 
    } else {
@@ -91,110 +94,180 @@ $("#atmo").on("click", function(){
 
 // Selected Restaurants and Opacity
 $("#hood li").on("click", function(){
-	var neighbor = $(this).text();
+	neighbor = $(this).text();
 
-   $('.restaurant-item[data-hood="'+neighbor+'"]').animate({
+
+    $("#hood li").removeClass("active");
+   $(this).addClass("active");
+
+   $(this).animate({
       opacity: 1
    });
 
-   $(".restaurant-item").not('.restaurant-item[data-hood="' +neighbor+ '"]').animate({
-      opacity: 0.1
+   $("#hood li").not(this).animate({
+      opacity: 0.3
    });
 
 });
 
 $("#cuisine li").on("click", function(){
-   var food = $(this).text();
-
-   $('.restaurant-item[data-cuisine="' +food+ '"]').animate({
-      opacity: 1
-   });
-
-   $(".restaurant-item").not('.restaurant-item[data-cuisine="' +food+ '"]').animate({
-      opacity: 0.1
-   });
+  food = $(this).text();
 
    $("#cuisine li").removeClass("active");
    $(this).addClass("active");
 
+   $(this).animate({
+      opacity: 1
+   });
+
+   $("#cuisine li").not(this).animate({
+      opacity: 0.3
+   });
+
 });
 
 $("#price li").on("click", function(){
-   var money = $(this).text();
+  money = $(this).text();
 
-$('.restaurant-item[data-price="' +money+ '"]').animate({
-   opacity: 1
-});
+   $("#price li").removeClass("active");
+   $(this).addClass("active");
 
-$(".restaurant-item").not('.restaurant-item[data-price="' +money+ '"]').animate({
-   opacity: 0.1
-});
+   $(this).animate({
+      opacity: 1
+   });
+
+   $("#price li").not(this).animate({
+      opacity: 0.3
+   });
 
 });
 
 $("#good li").on("click", function(){
-   var dates = $(this).text();
+  dates = $(this).text();
 
-$('.restaurant-item[data-good="' +good+ '"]').animate({
-   opacity: 1
-});
+   $("#good li").removeClass("active");
+   $(this).addClass("active");
 
-$(".restaurant-item").not('.restaurant-item[data-good="' +dates+ '"]').animate({
-   opacity: 0.1
-});
+   $(this).animate({
+      opacity: 1
+   });
+
+   $("#good li").not(this).animate({
+      opacity: 0.3
+   });
 
 });
 
 $("#atmo li").on("click", function(){
-   var sphere = $(this).text();
+  sphere = $(this).text();
 
-$('.restaurant-item[data-atmo="' +sphere+ '"]').animate({
-   opacity: 1
+   $("#atmo li").removeClass("active");
+   $(this).addClass("active");
+
+   $(this).animate({
+      opacity: 1
+   });
+
+   $("#atmo li").not(this).animate({
+      opacity: 0.3
+   });
+
 });
 
-$(".restaurant-item").not('.restaurant-item[data-atmo="' +sphere+ '"]').animate({
-   opacity: 0.1
-});
-
-});
 
 
 // Clicking on Multiple Filters Without Impacting Overall Result
-
-$("#hood li").on("click", function(){
-var resItems = (".restaurant-item");
- // save variable
+   // show results of filters, opacity
+var matchesFilter = true;
 
 $("#gogo").on("click", function(){
-   // show results of filters, opacity
-})
+   console.log("Neighbor:",neighbor, "Money:",money, "Dates:", dates, "Sphere:",sphere, "Food:",food);
 
-if  ((neighbor !== ""){
-    $(this).show(".restaurant-item");
+   $.each(restaurants, function(index,element){
+      matchesFilter = true;
+
+      // console.log(index,element);
+      // if ($(element).attr('data-hood') === neighbor ) {
+      //    $(element).show();
+      // } else {
+      //    $(element).hide();
+      // }
+
+
+      // if neighbor is not empty
+      if (neighbor !== "") {
+         // if not, is data-hood equal to neighbor
+         if ($(element).attr('data-hood') !== neighbor ) {
+            // if not, then set matchesfilter to false
+            matchesFilter = false;
+         };
+      };
+
+       if (food !== "") {
+         // if not, is data-hood equal to neighbor
+         if ($(element).attr('data-cuisine') !== food ) {
+            // if not, then set matchesfilter to false
+            matchesFilter = false;
+         };
+      };
+
+       if (money !== "") {
+         // if not, is data-hood equal to neighbor
+         if ($(element).attr('data-price') !== money ) {
+            // if not, then set matchesfilter to false
+            matchesFilter = false;
+         };
+      };
+
+       if (dates !== "") {
+         // if not, is data-hood equal to neighbor
+         if ($(element).attr('data-good') !== dates ) {
+            // if not, then set matchesfilter to false
+            matchesFilter = false;
+         };
+      };
+
+       if (sphere !== "") {
+         // if not, is data-hood equal to neighbor
+         if ($(element).attr('data-atmo') !== sphere ) {
+            // if not, then set matchesfilter to false
+            matchesFilter = false;
+         };
+      };
+
+      // REPEAT for all filters
+
+      // if matchesfilter is equal to true
+
+      if (matchesFilter === true) {
+         $(element).animate({
+            opacity: 1
+         })
+      } else {
+         $(element).animate({
+            opacity: .1
+         })
+         
+      }
+      // if so, then show the item
+      // if not then hide the item
+   });
 });
 
-// ?????
 
- if (food !== "")
- if (money !== "")
- if (dates !== "")
- if (sphere !== "")
+// Previous Opacity
+
+// $('.restaurant-item[data-hood="'+neighbor+'"]').animate({
+   //    opacity: 1
+   // });
+
+   // $(".restaurant-item").not('.restaurant-item[data-hood="' +neighbor+ '"]').animate({
+   //    opacity: 0.1
+   // });
 
 
 
-$(".restaurant-item").attr('data-hood') === neighbor && $(".restaurant-item").attr('data-cuisine') === food && 
-$(".restaurant-item").attr('data-price') === money && $(".restaurant-item").attr('data-good') === dates &&
-$(".restaurant-item").attr('data-atmo') === sphere
-
-for (var resItems = 0; resItems < 5; resItems++) {
    
-}
-
-$("#cuisine li").on("click", function(){
-$("#price li").on("click", function(){
-$("#good li").on("click", function(){
-$("#atmo li").on("click", function(){
-
 
 
 

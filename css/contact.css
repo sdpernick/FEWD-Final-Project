@@ -50,6 +50,12 @@ a:link{
   text-decoration: none;
 }
 
+@media only screen and (max-width: 767px) {
+  .dc, .guide{
+    width: 40%;
+  }
+}
+
 /*Contact*/
 
 body{
@@ -152,6 +158,54 @@ h2 {
   margin-top: 40px;
 }
 
+input[type=text]:focus{
+  outline: 0;
+  background-color: #dcdcdc;
+}
+
+textarea[type=text]:focus{
+   outline: 0;
+  background-color: #dcdcdc;
+}
+
+/*Contact Box Responsivness */
+@media only screen and (max-width: 767px) {
+  #contact-box{
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #test{
+    clear: both;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .email{
+    clear: both;
+    display: block;
+    margin: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #test{
+    clear: both;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .email{
+    clear: both;
+    display: block;
+    margin: 0px;
+  }
+}
 
 /*Footer*/
 
@@ -168,4 +222,19 @@ footer{
   border-bottom: solid #95a5a6 1px;
   margin: 50px 50px 30px;
   text-align: center;
+}
+
+/*Footer Responsive*/
+@media only screen and (max-width: 767px) {
+  footer{
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  footer{
+    width: 50%;
+    margin: auto;
+  }
 }
