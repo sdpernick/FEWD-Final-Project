@@ -197,7 +197,8 @@ $("#gogo").on("click", function(){
       // if neighbor is not empty
       if (neighbor !== "") {
          // if not, is data-hood equal to neighbor
-         if ($(element).attr('data-hood') !== neighbor ) {
+         // if ($(element).attr('data-hood') !== neighbor ) {
+         if ($(element).attr('data-hood').indexOf(neighbor) < 0) {
             // if not, then set matchesfilter to false
             matchesFilter = false;
          };
@@ -205,7 +206,7 @@ $("#gogo").on("click", function(){
 
        if (food !== "") {
          // if not, is data-hood equal to neighbor
-         if ($(element).attr('data-cuisine') !== food ) {
+         if ($(element).attr('data-cuisine').indexOf(food) < 0) {
             // if not, then set matchesfilter to false
             matchesFilter = false;
          };
@@ -213,7 +214,7 @@ $("#gogo").on("click", function(){
 
        if (money !== "") {
          // if not, is data-hood equal to neighbor
-         if ($(element).attr('data-price') !== money ) {
+         if ($(element).attr('data-price').indexOf(money) < 0) {
             // if not, then set matchesfilter to false
             matchesFilter = false;
          };
@@ -221,7 +222,7 @@ $("#gogo").on("click", function(){
 
        if (dates !== "") {
          // if not, is data-hood equal to neighbor
-         if ($(element).attr('data-good') !== dates ) {
+         if ($(element).attr('data-good').indexOf(dates) < 0) {
             // if not, then set matchesfilter to false
             matchesFilter = false;
          };
@@ -229,7 +230,7 @@ $("#gogo").on("click", function(){
 
        if (sphere !== "") {
          // if not, is data-hood equal to neighbor
-         if ($(element).attr('data-atmo') !== sphere ) {
+         if ($(element).attr('data-atmo').indexOf(sphere) < 0) {
             // if not, then set matchesfilter to false
             matchesFilter = false;
          };
@@ -252,6 +253,25 @@ $("#gogo").on("click", function(){
       // if so, then show the item
       // if not then hide the item
    });
+});
+
+
+// Clear All Filters
+$("#clear").on("click",function(){
+   neighbor = "";
+   food = "";
+   money = "";
+   dates = "";
+   sphere = "";
+   $(".dropdown").removeClass("active");
+   $("li").removeClass("active");
+   $("li").animate({
+      opacity: 1
+   });
+   $(".restaurant-item").animate({
+      opacity: 1
+   });
+
 });
 
 

@@ -396,12 +396,97 @@ a:link{
   }
 }
 
+/*Contact*/
+#overlay2{
+  background-color: rgba(000,000,000,.5);
+  width: 100%;
+  height: 180px;
+}
+
+#overlay2:hover{
+  background-color: rgba(000,000,000,.4);
+}
+
+#second{
+  border-top: solid #d3d3d3 1px;
+  border-bottom: solid #d3d3d3 1px;
+  text-align: center;
+  clear: both;
+  background-image: url("../images/background7.png");
+   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.comment{
+    font-family: 'Cinzel', serif;
+    color: #2F4F4F;
+    font-size: 26px;
+    font-weight: 800;
+    border-bottom: solid #d3d3d3 1px;
+   text-align: center;
+   margin: 0px 400px 30px;
+   color: white;
+   padding-top: 40px;
+}
+
+.contact{
+  font-size: 20px;
+    font-family: 'Cinzel', serif;
+    padding: 5px 20px 5px;
+    color: #2F4F4F;
+    text-transform: uppercase;
+}
+
+/*Contact Responsive*/
+@media only screen and (max-width: 767px) {
+  .comment{
+    width: 50%;
+    margin: 30px auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .comment{
+    width: 50%;
+    margin: 30px auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #second{
+    background-attachment: scroll;
+    background-size: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #second{
+    background-attachment: local;
+    background-size: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #overlay2{
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #overlay2{
+    width: 100%;
+  }
+}
+
+
 /*Footer*/
 
 footer{
   margin: 0 auto;
-  background-color: rgba(000,000,000,.05);
-  height: 100px;
+  width: 450px;
 }
 
 .footer{
@@ -410,21 +495,20 @@ footer{
   font-family: 'Cinzel', serif;
   font-weight: 400;
   border-bottom: solid #95a5a6 1px;
-  margin: 50px 420px 20px;
+  margin: 30px 50px;
   text-align: center;
-  padding-top: 30px;
 }
 
 /*Footer Responsive*/
 @media only screen and (max-width: 767px) {
-  .footer{
+  footer{
     width: 80%;
     margin: auto;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .footer{
+  footer{
     width: 50%;
     margin: auto;
   }
