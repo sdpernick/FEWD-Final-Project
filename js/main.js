@@ -52,7 +52,7 @@ $("#price").on("click", function(){
    } else {
       $(this).addClass("open");
       $("#price").animate({
-         height: 150
+         height: 250
       });
    }
 
@@ -286,9 +286,18 @@ $("#clear").on("click",function(){
    // });
 
 
+// Form Clear and Message  
+$(".send").on("click",function(){
+    window.alert("Congrats! Your form has been submitted.");
+    $("#name1").val("");
+    $("#email1").val("");
+    $("#message1").val("");
+
+});
+
 
    
-
+  
 
 
 
